@@ -10,6 +10,37 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav_left">
+          <%= link_to "V!deo", root_path, class: :nav_left_btn%>
+        </div>
+        <div class="nav">
+          <%# ログインをしている場合の表示%>
+          <% if user_signed_in? %>
+            <div class="nav_right">
+              <%= link_to "HOME", root_path, class: :nav__btn %>
+              <%= link_to "DETAILS", "#", class: :nav__btn %>
+              <%= link_to "UPLOAD", "#", class: :nav__btn %>
+              <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: :nav__btn%>
+            </div>
+          <%# ログインをしている場合の表示%>
+          <%# ログインをしていない場合の表示%>
+          <% else %>
+            <div class="nav_right">
+              <%= link_to "HOME", root_path, class: :nav__btn %>
+              <%= link_to "DETAILS", "#", class: :nav__btn %>
+              <%= link_to "SIGN-IN", new_user_session_path, class: :nav__btn %>
+              <%= link_to "SIGN-UP", new_user_registration_path, class: :nav__btn%>
+            </div>
+          <% end %>
+          <%# ログインをしていない場合の表示%>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+        ©2020 TECH-CAMP ORIGINAL_APPLICATION V!DEO
+    </footer>
   </body>
 </html>

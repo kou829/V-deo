@@ -1,0 +1,61 @@
+/* 新規登録ページ */
+
+.r-background{
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url('b091.jpg');
+}
+
+.inner h2{
+  padding-top: 30px;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.inner-field{
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.field{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.field label{
+  font-family: Impact;
+} 
+
+.submit{
+  margin-top: 30px;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  border-top: 4px solid #48ecc4;
+  border-right: 4px solid #0a5f4a;
+  border-bottom: 4px solid #0f745b;
+  border-left: 4px solid #8cf9de;
+  border-radius: 0;
+  background: #11a37f;
+}
+
+.field-box-str{
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  font-size: 16px;
+  border: none;
+}
+
+.field-box-text{
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  font-size: 16px;
+  border: none;
+}

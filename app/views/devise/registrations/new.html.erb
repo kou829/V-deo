@@ -1,0 +1,44 @@
+<div class="r-main">
+    <div class="inner">
+      <%= form_with model: @user, url: user_registration_path(@user.id), local: true do |f| %>
+        <%# render "devise/shared/error_messages", resource: resource %>
+        <div class="r-background">
+          <h2>Sign up</h2>
+          <div class="inner-field">
+            <div class="field">
+                <%= f.label :nickname, "NickName" %><br />
+                <%= f.text_field :nickname, class:"field-box-str" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"field-box-str" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password", class:"field-box-str" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"field-box-str" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :introduction, "Introduction" %><br />
+              <%= f.text_area :introduction, class:"field-box-text" %>
+            </div>
+
+            <div class="r-actions">
+              <%= f.submit "Sign up", class:"submit"%>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+<%# render "devise/shared/links" %>
