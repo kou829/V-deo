@@ -1,0 +1,74 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* header */
+
+.inner{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.nav{
+  margin-left: 20%;
+}
+
+.nav_left{
+  font-size: 70px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav_left_btn{
+  color: #CCCC99;
+}
+
+.nav__btn{
+  margin-left: 30px;
+  font-size: 30px;
+  color: #CCCC99;
+}
+
+/* footer */
+  
+.footer{
+  width: 100%;
+  background-color: #3b4043;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+

@@ -1,0 +1,25 @@
+<div class="s-main">
+  <div class="s-background-image">
+    <div class="s-inner">
+      <h2>Log in</h2>
+      <div class="s-inner-field">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="s-field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"field-box-str" %>
+          </div>
+
+          <div class="s-field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class:"field-box-str" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Log in", class:"submit" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
