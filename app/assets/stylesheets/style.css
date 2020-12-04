@@ -68,7 +68,7 @@ a {
 /* footer */
   
 .footer{
-  width: 100%;
+  width: 100vw;
   background-color: #293233;
   color: #fff;
   text-align: center;

@@ -1,0 +1,40 @@
+// 詳細ページ
+
+.vs-background-video-box{
+  position: relative;
+  background-color: #ffffff;
+  width: 796px;
+  height: 519px;
+  margin: auto; 
+}
+
+.vs-video video{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  size: 200px;
+  border: 5px solid #35043d;
+}
+
+.vs-title-lan{
+  font-size: 50px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #0c0c0c;
+}
+
+.vs-select-btn{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.vs-update{
+  text-align: center;
+  font-size: 40px;
+}
+
+.vs-delete{
+  text-align: center;
+  font-size: 40px;
+}

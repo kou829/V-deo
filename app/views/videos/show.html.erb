@@ -1,0 +1,20 @@
+<div class="vs-main">
+  <div class="vs-background">
+    <div class="vs-background-image">
+      <% if @video.video.attached? %>
+        <div class="vs-background-video-box">
+          <div class="vs-video">
+            <video src="<%= rails_blob_path(@video.video)%>" type="video/mp4" controls="controls", width="776" height="497"></video>
+          </div>
+        </div>
+      <% end %>
+        <h3 class="vs-title-lan">
+          <%= link_to @video.title %>
+        </h3>
+        <div class="vs-select-btn">
+          <%= link_to '編集', edit_video_path, class:"vs-update" %>
+          <%= link_to '削除', video_path, method: :delete, class:"vs-delete"%>
+        <div>
+    </div>
+  </div>
+</div>
