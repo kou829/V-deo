@@ -17,16 +17,19 @@
             <%= image_tag "running.jpg", class:"i-image" %>HOBBY
           </div>
         </div>
-        <div class="background-video-box">
-          <div class="video">
-            <%= "videoの表示" %>
-          </div>
-        </div>
-        <h3 class="title-lan">
-          <%= "タイトル" %>
-        </h3>
-        <div class="background-2">
-          
+        <% @videos.each do |video| %>
+          <% if video.video.attached? %>
+            <div class="background-video-box">
+              <div class="video">
+                <video src="<%= rails_blob_path(video.video)%>" type="video/mp4" controls="controls", width="776" height="497"></video>
+              </div>
+            </div>
+            <h3 class="title-lan">
+              <%= link_to video.title, "#", class:"title-link" %>
+            </h3>
+            <div class="background-2">
+          <% end %>
+        <% end %>
         </div>
       </div>
     </div>
