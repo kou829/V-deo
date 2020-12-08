@@ -1,4 +1,7 @@
 class VideosController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :set_video, only: [:show, :edit, :update, :destroy]
+
   def index 
     @videos = Video.order(created_at: :desc)
   end
@@ -17,18 +20,15 @@ class VideosController < ApplicationController
   end
 
   def show
-    @video = Video.find(params[:id])
   end
 
   def edit
-    @video = Video.find(params[:id])
     unless current_user.id == @video.user.id
       redirect_to root_path
     end
   end
 
   def update
-    @video = Video.find(params[:id])
     if @video.update(video_params)
       redirect_to action: :show
     else
@@ -37,7 +37,6 @@ class VideosController < ApplicationController
   end
     
   def destroy
-    @video = Video.find(params[:id])
     if current_user.id == @video.user_id
       @video.destroy
       redirect_to action: :index
@@ -50,6 +49,10 @@ class VideosController < ApplicationController
   private
   def video_params
     params.require(:video).permit(:title, :overview, :video).merge(user_id: current_user.id)
+  end
+
+  def set_video
+    @video = Video.find(params[:id])
   end
 
 end

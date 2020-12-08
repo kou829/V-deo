@@ -12,8 +12,10 @@
           <%= link_to @video.title %>
         </h3>
         <div class="vs-select-btn">
-          <%= link_to '編集', edit_video_path, class:"vs-update" %>
-          <%= link_to '削除', video_path, method: :delete, class:"vs-delete"%>
+          <% if  user_signed_in? && current_user.id == @video.user_id%>
+            <%= link_to '編集', edit_video_path, class:"vs-btn" %>
+            <%= link_to '削除', video_path, method: :delete, class:"vs-btn"%>
+          <% end %>
         <div>
     </div>
   </div>

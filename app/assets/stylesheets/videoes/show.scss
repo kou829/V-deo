@@ -1,5 +1,10 @@
 // 詳細ページ
 
+.vs-background{
+  background-color: #bce2e8;
+  padding-top: 50px;
+}
+
 .vs-background-video-box{
   position: relative;
   background-color: #ffffff;
@@ -29,12 +34,12 @@
   padding: 15px;
 }
 
-.vs-update{
+.vs-btn{
   text-align: center;
-  font-size: 40px;
-}
-
-.vs-delete{
-  text-align: center;
-  font-size: 40px;
+  margin: auto;
+  font-size: 50px;
+  padding: 5px 0;
+  border: 1px solid #0c0c0c;
+  width: 300px;
+  margin-bottom: 30px;
 }

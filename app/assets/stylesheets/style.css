@@ -37,7 +37,7 @@ a {
 /* header */
 
 .header{
-  background-color: #7c9599;
+  background-color: #cff2f8;
 }
 
 .inner{
@@ -56,13 +56,13 @@ a {
 }
 
 .nav_left_btn{
-  color:#ffffff;
+  color:rgb(41, 40, 37);
 }
 
 .nav__btn{
   margin-left: 30px;
   font-size: 30px;
-  color:#ffffff;
+  color: rgb(41, 40, 37);
 }
 
 /* footer */
