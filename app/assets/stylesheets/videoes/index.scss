@@ -1,7 +1,7 @@
 /* トップページ */
 
 .background{
-  background-color:#003366;
+  background-color:#bce2e8;
 }
 
 .background-image{
@@ -52,22 +52,24 @@ ul{
 }
 
 .background-video-box{
-  background-color: aliceblue;
+  position: relative;
+  background-color: #ffffff;
   width: 796px;
   height: 519px;
   margin: auto; 
 }
 
-.video{
-  text-align: center;
-  font-size: 70px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.video video{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  size: 200px;
+  border: 5px solid #35043d;
 }
 
 .title-lan{
   font-size: 50px;
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #0c0c0c;
 }
-
-

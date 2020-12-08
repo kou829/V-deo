@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'videoes/index'
-  root to: 'videoes#index'
+  get 'videos/index'
+  root to: 'videos#index'
 
-  resources :videoes, only: :new
+  resources :videos
 end

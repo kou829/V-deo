@@ -20,8 +20,7 @@
           <% if user_signed_in? %>
             <div class="nav_right">
               <%= link_to "HOME", root_path, class: :nav__btn %>
-              <%= link_to "DETAILS", "#", class: :nav__btn %>
-              <%= link_to "UPLOAD", "#", class: :nav__btn %>
+              <%= link_to "UPLOAD", new_video_path, class: :nav__btn %>
               <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: :nav__btn%>
             </div>
           <%# ログインをしている場合の表示%>
@@ -29,7 +28,6 @@
           <% else %>
             <div class="nav_right">
               <%= link_to "HOME", root_path, class: :nav__btn %>
-              <%= link_to "DETAILS", "#", class: :nav__btn %>
               <%= link_to "SIGN-IN", new_user_session_path, class: :nav__btn %>
               <%= link_to "SIGN-UP", new_user_registration_path, class: :nav__btn%>
             </div>

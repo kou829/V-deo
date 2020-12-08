@@ -1,0 +1,29 @@
+<div class="vn-main">
+  <div class="vn-background">
+    <div class="vn-background-image">
+      <div class="vn-upload">
+        <h1>UPLOAD V!DEO</h1>
+        <%= form_with(model: @video, local: true) do |f|%>
+          <div class="vn-field">
+            <%= f.label :video, "YOUR_HAPPY_V!DEO" %><br />
+            <%= f.file_field :video %>
+          </div>
+
+          <div class="vn-field">
+            <%= f.label :title, "TITLE" %><br />
+            <%= f.text_field :title, class:"field-box", placeholder:"TITLE（50文字以内）" %>
+          </div>
+
+          <div class="vn-field">
+            <%= f.label :overview, "OVER_VIEW" %><br />
+            <%= f.text_area :overview, class:"field-box-text", placeholder:"TITLE（500文字以内）" %>
+          </div>
+
+          <div class="vn-actions">
+            <%= f.submit "保存する", class: :form__btn  %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

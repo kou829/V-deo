@@ -1,0 +1,47 @@
+// 動画投稿ページ
+
+.vn-background{
+  background-color: #bce2e8;
+  height: 100vh;
+}
+
+.vn-upload h1{
+  padding: 50px 0;
+  text-align: center;
+} 
+
+.vn-field{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+.vn-actions{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.vn-field label{
+  padding-top: 20px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+}
+
+.field-box{
+  border: none;
+  width: 300px;
+  height: 50px;
+  background-color: #bce2e8;
+  border: 3px solid #005766;
+}
+
+.field-box-text{
+  border: none;
+  width: 500px;
+  height: 200px;
+  background-color: #bce2e8;
+  border: 3px solid #005766;
+}

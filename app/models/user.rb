@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
+  has_many :videos
+
   validates :nickname, presence: true
   validates :introduction, presence: true
 end
